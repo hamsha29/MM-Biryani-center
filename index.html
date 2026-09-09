@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MM Biryani Centre - Authentic Pakistani Biryani</title>
+    <meta name="description" content="Experience authentic Pakistani biryani at MM Biryani Centre. Fresh ingredients, traditional taste, fast service.">
+    <meta name="keywords" content="Pakistani biryani, restaurant, food delivery, authentic cuisine">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container navbar-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>MM Biryani Centre</span>
+            </div>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#menu" class="nav-link">Menu</a></li>
+                <li><a href="#about" class="nav-link">About Us</a></li>
+                <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button class="order-btn" onclick="scrollToMenu()">Order Now</button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Welcome to MM Biryani Centre</h1>
+            <p class="hero-subtitle">Authentic Pakistani Biryani, Made Fresh & Full of Flavor</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="scrollToMenu()">Order Now</button>
+                <button class="btn btn-secondary" onclick="scrollToMenu()">View Menu</button>
+                <a href="tel:+923001234567" class="btn btn-outline">
+                    <i class="fas fa-phone"></i> Call Now
+                </a>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://images.unsplash.com/photo-1589302168068-964664565272?w=800&h=600&fit=crop" alt="Delicious Pakistani Biryani">
+        </div>
+    </section>
+
+    <!-- Special Offer Section -->
+    <section class="special-offer">
+        <div class="container">
+            <div class="offer-banner">
+                <div class="offer-content">
+                    <h2><i class="fas fa-fire"></i> Special Biryani Deal</h2>
+                    <p>Delicious Biryani at a Great Price</p>
+                    <p class="offer-description">Get 20% off on all biryani orders this week!</p>
+                </div>
+                <div class="offer-buttons">
+                    <button class="btn btn-primary" onclick="scrollToMenu()">Order Now</button>
+                    <button class="btn btn-secondary" onclick="alert('20% discount applied on biryani orders!')">View Deal</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <h2 class="section-title">Our Delicious Menu</h2>
+            <p class="section-subtitle">Freshly prepared authentic Pakistani cuisine</p>
+
+            <!-- Menu Tabs -->
+            <div class="menu-tabs">
+                <button class="tab-btn active" onclick="filterMenu('all')">All</button>
+                <button class="tab-btn" onclick="filterMenu('biryani')">Biryani</button>
+                <button class="tab-btn" onclick="filterMenu('chicken')">Chicken</button>
+                <button class="tab-btn" onclick="filterMenu('rice')">Rice</button>
+                <button class="tab-btn" onclick="filterMenu('drinks')">Drinks</button>
+                <button class="tab-btn" onclick="filterMenu('deals')">Deals</button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-grid" id="menuGrid">
+                <!-- Menu items will be populated by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fas fa-leaf"></i>
+                    <h3>Authentic Taste</h3>
+                    <p>Traditional recipes passed down through generations</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-fire"></i>
+                    <h3>Freshly Prepared</h3>
+                    <p>Cooked fresh to order with premium ingredients</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Made With Care</h3>
+                    <p>Every dish prepared with passion and expertise</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fas fa-bolt"></i>
+                    <h3>Fast Service</h3>
+                    <p>Quick preparation and timely delivery guaranteed</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About MM Biryani Centre</h2>
+                    <p>Welcome to MM Biryani Centre, where culinary tradition meets modern excellence. We are dedicated to serving the most authentic and delicious Pakistani biryani in the region.</p>
+                    
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Fresh Ingredients</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Authentic Taste</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Freshly Prepared Food</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Fast Service</span>
+                        </div>
+                        <div class="about-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Quality & Hygiene</span>
+                        </div>
+                    </div>
+
+                    <p>Every biryani we prepare is a masterpiece of flavors, carefully crafted with premium spices and ingredients. Our commitment to quality and hygiene ensures that every bite is safe, delicious, and memorable.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=500&h=500&fit=crop" alt="Restaurant Chef">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <h2 class="section-title">Our Gallery</h2>
+            <p class="section-subtitle">Feast your eyes on our delicious creations</p>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1589302168068-964664565272?w=400&h=400&fit=crop" alt="Chicken Biryani">
+                    <div class="gallery-overlay">
+                        <p>Chicken Biryani</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1565557623262-b51c2e60a014?w=400&h=400&fit=crop" alt="Beef Biryani">
+                    <div class="gallery-overlay">
+                        <p>Beef Biryani</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1588195538326-c5b1e6f5eb3f?w=400&h=400&fit=crop" alt="Special Biryani">
+                    <div class="gallery-overlay">
+                        <p>Special Biryani</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400&h=400&fit=crop" alt="Rice Dishes">
+                    <div class="gallery-overlay">
+                        <p>Rice Dishes</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1585521914004-84a1f9caa3cb?w=400&h=400&fit=crop" alt="Food Presentation">
+                    <div class="gallery-overlay">
+                        <p>Food Presentation</p>
+                    </div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1541519227354-08fa5d50c44d?w=400&h=400&fit=crop" alt="Appetizers">
+                    <div class="gallery-overlay">
+                        <p>Appetizers</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Reviews Section -->
+    <section class="reviews">
+        <div class="container">
+            <h2 class="section-title">Customer Reviews</h2>
+            <p class="section-subtitle">What our happy customers say</p>
+            
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Delicious biryani and amazing taste! The freshness and quality are unmatched. Highly recommended!"</p>
+                    <p class="review-author">- Ahmed Hassan</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"One of the best biryani places in town! Fast service and authentic flavors. Love it!"</p>
+                    <p class="review-author">- Fatima Khan</p>
+                </div>
+                <div class="review-card">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Fresh, flavorful and satisfying. Every bite is worth it. Best biryani experience ever!"</p>
+                    <p class="review-author">- Muhammad Ali</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section" id="cartSection" style="display: none;">
+        <div class="container">
+            <div class="cart-wrapper">
+                <!-- Cart Items -->
+                <div class="cart-items">
+                    <h3>Your Order</h3>
+                    <div class="cart-list" id="cartList">
+                        <!-- Cart items will be added here -->
+                    </div>
+                    <div class="cart-totals">
+                        <div class="total-row">
+                            <span>Subtotal:</span>
+                            <span id="subtotal">Rs. 0</span>
+                        </div>
+                        <div class="total-row">
+                            <span>Delivery Fee:</span>
+                            <span>Rs. 150</span>
+                        </div>
+                        <div class="total-row grand-total">
+                            <span>Total:</span>
+                            <span id="grandTotal">Rs. 150</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+                </div>
+
+                <!-- Checkout Form -->
+                <div class="checkout-form">
+                    <h3>Checkout</h3>
+                    <form id="orderForm" onsubmit="submitOrder(event)">
+                        <div class="form-group">
+                            <label for="customerName">Your Name *</label>
+                            <input type="text" id="customerName" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="customerPhone">Phone Number *</label>
+                            <input type="tel" id="customerPhone" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="deliveryAddress">Delivery Address *</label>
+                            <textarea id="deliveryAddress" rows="3" required></textarea>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="orderNotes">Order Notes (Optional)</label>
+                            <textarea id="orderNotes" rows="2"></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">PLACE ORDER</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">We'd love to hear from you</p>
+            
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Address</h3>
+                        <p>123 Food Street, Karachi, Pakistan</p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p>+92 300 1234567</p>
+                        <a href="tel:+923001234567" class="btn btn-outline btn-small">Call Us</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fab fa-whatsapp"></i>
+                        <h3>WhatsApp</h3>
+                        <p>+92 300 1234567</p>
+                        <a href="https://wa.me/923001234567?text=Hello%20MM%20Biryani%20Centre,%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="btn btn-outline btn-small">Message Us</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <i class="fas fa-clock"></i>
+                        <h3>Opening Hours</h3>
+                        <p>Mon - Sun: 11:00 AM - 11:00 PM</p>
+                    </div>
+                </div>
+
+                <div class="contact-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.159892414119!2d67.0011!3d24.8607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33e06651c59b5%3A0x9cf92f402576ddb!2sKarachi%2C%20Sindh%2C%20Pakistan!5e0!3m2!1sen!2s!4v1234567890" width="100%" height="400" style="border:none;border-radius:12px;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>MM Biryani Centre</h4>
+                    <p>Serving authentic Pakistani biryani with love and passion.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" title="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://wa.me/923001234567" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 MM Biryani Centre. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/923001234567?text=Hello%20MM%20Biryani%20Centre,%20I%20would%20like%20to%20place%20an%20order." target="_blank" class="whatsapp-btn" title="Chat with us on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Order Confirmation Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <button class="close-btn" onclick="closeConfirmation()">&times;</button>
+            <div class="confirmation-icon">
+                <i class="fas fa-check-circle"></i>
+            </div>
+            <h2>Order Confirmed!</h2>
+            <p>Thank you for your order. We'll prepare your delicious biryani right away!</p>
+            <p id="confirmationMessage"></p>
+            <button class="btn btn-primary" onclick="closeConfirmation()">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
